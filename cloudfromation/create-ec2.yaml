@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+  # Here put all of your resources?
+  # One EC2 Instance
+  ISWebServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: 'ami-0b0dcb5067f052a63'
+      InstanceType: 't2.large'
+      KeyName: 'devops2202'
+#      InstanceProfile: !Ref MyInstanceProfile # Reffering IAM Instance Profile created below
+## Adding IAM Role using an instance profile resource
+#  MyInstanceProfile:
+#    Type: "AWS::IAM::InstanceProfile"
+#    Properties:
+#      Path: "/"
+#      Roles:
+#        - "ec2-s3-full-access"
+
